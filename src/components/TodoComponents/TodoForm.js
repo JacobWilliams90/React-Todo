@@ -36,9 +36,12 @@ export default class TodoForm extends Component {
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
+          placeholder='Type task here...' 
         />
-        <button onClick={this.handleSubmit}>Add</button>
-        <button onClick={this.handleClear}>Clear Completed</button>
+        <div className='buttons'>
+            <button onClick={this.handleSubmit}>Add Task</button>
+            <button onClick={this.handleClear}>Clear Completed</button>
+        </div>
       </form>
     );
   }

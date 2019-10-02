@@ -6,7 +6,7 @@ const Todo = props => {
       onClick={props.onClick}
       className={`task${props.task.completed? " completed" : ""}`}
     >
-      <p>{props.task.task}</p>
+      <h3>{props.task.task}</h3>
     </div>
   );
 };

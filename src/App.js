@@ -53,8 +53,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="Head">
-          <h2>Welcome to your Todo App!</h2>
-          <div>
+          <h2>Jacobs To-Do App</h2>
+          <p>Click to complete task!</p>
+          <div className='tasks'>
             {this.state.todo.map(task => (
               <Todo
                 key={task.id}
