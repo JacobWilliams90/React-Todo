@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todo: data
+      todo: []
     };
   }
 
@@ -47,6 +47,18 @@ class App extends React.Component {
     this.setState({
       todo: [...this.state.todo, newItem]
     })
+  }
+
+  componentWillMount() {
+    let todoList = localStorage.getItem('todo')
+    if (todoList) {
+      this.setState({
+        todo: JSON.parse(localStorage.getItem('todo'))
+      })
+    }
+  }
+  componentDidUpdate() {
+    localStorage.setItem('todo', JSON.stringify(this.state.todo))
   }
 
   render() {
