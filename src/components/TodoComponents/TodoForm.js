@@ -8,13 +8,13 @@ export default class TodoForm extends Component {
     };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       value: event.target.value
     });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
 
     this.props.addTask(event, this.state.value);
@@ -24,10 +24,10 @@ export default class TodoForm extends Component {
     });
   };
 
-  handleClear = (event) => {
-      event.preventDefault();
-      this.props.clearCompleted(event)
-  }
+  handleClear = event => {
+    event.preventDefault();
+    this.props.clearCompleted(event);
+  };
 
   render() {
     return (
@@ -36,11 +36,11 @@ export default class TodoForm extends Component {
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
-          placeholder='Type task here...' 
+          placeholder="Type task here..."
         />
-        <div className='buttons'>
-            <button onClick={this.handleSubmit}>Add Task</button>
-            <button onClick={this.handleClear}>Clear Completed</button>
+        <div className="buttons">
+          <button onClick={this.handleSubmit}>Add Task</button>
+          <button onClick={this.handleClear}>Clear Completed</button>
         </div>
       </form>
     );
