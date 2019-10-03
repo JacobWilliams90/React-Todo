@@ -1,5 +1,4 @@
 import React from "react";
-import data from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import Todo from "./components/TodoComponents/Todo";
 import "./components/TodoComponents/Todo.css";
@@ -66,7 +65,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="Head">
-          <h2>Jacobs To-Do App</h2>
+          <h2>What do I have to do today?</h2>
           <p>Click to complete task!</p>
           <div className="tasks">
             {this.state.todo.map(task => (
